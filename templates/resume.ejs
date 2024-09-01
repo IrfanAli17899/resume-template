@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= personalInfo.name %> - Full Stack Engineer & DevOps Specialist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* line-height: 1.1; */
+            color: #333;
+            width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 14px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            margin-bottom: 25px;
+             border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+        .skills-line{
+            margin-top: 2px; line-height: 1.5; display: block;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 5px;
+        }
+        .experience-item, .project-item {
+            margin-bottom: 15px;
+        }
+        .experience-header, .project-header {
+            margin-bottom: 5px;
+        }
+        .experience-title, .project-name {
+            font-weight: bold;
+        }
+        .experience-company, .project-description {
+            /* font-style: italic; */
+            /* line-height: 1.2; */
+            /* display: block; */
+        }
+        .experience-date, .project-tech {
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+        .achievements {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>
+        <%= personalInfo.name %>
+        <% if (typeof downloadable !== 'undefined' && downloadable) { %>
+            <button onclick="window.location.href='/download-pdf'">Download PDF</button>
+        <% } %>
+    </h1>
+    <!-- <p><strong><%= personalInfo.title %></strong></p> -->
+    <div class="contact-info">
+        <%= personalInfo.location %> | <%= personalInfo.phone %> | <%= personalInfo.email %> |
+        <a href="<%= personalInfo.githubURL %>">GitHub</a> | 
+        <a href="<%= personalInfo.linkedinURL %>">LinkedIn</a>
+    </div>
+</header>
+
+    <section class="section">
+        <h2>Professional Summary</h2>
+        <p><%= professionalSummary %></p>
+    </section>
+
+    <section class="section">
+        <h2>Technical Skills</h2>
+        <% Object.entries(technicalSkills).forEach(function([category, skills]) { %>
+            <p><strong><%= category %>:</strong> <br />  <span class="skills-line"><%= skills.join(', ') %></span></p>
+        <% }); %>
+    </section>
+
+    <section class="section">
+        <h2>Professional Experience</h2>
+        <% professionalExperience.forEach(function(job) { %>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title"><%= job.title %></span> - 
+                    <span class="experience-company"><%= job.company %>, <%= job.location %></span>
+                    <span class="experience-date"><%= job.startDate %> - <%= job.endDate %></span>
+                </div>
+                <ul class="achievements">
+                    <% job.achievements.forEach(function(achievement) { %>
+                        <li><%= achievement %></li>
+                    <% }); %>
+                </ul>
+            </div>
+        <% }); %>
+    </section>
+
+    <section class="section">
+        <h2>Notable Projects</h2>
+        <% notableProjects.forEach(function(project) { %>
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name"><%= project.name %></span> - 
+                    <span class="project-description"><%= project.description %></span>
+                </div>
+                <ul>
+                    <% project.details?.forEach(function(detail) { %>
+                        <li><%= detail %></li>
+                    <% }); %>
+                </ul>
+            </div>
+        <% }); %>
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <% education.forEach(function(edu) { %>
+            <p><strong><%= edu.degree %></strong><br>
+            <%= edu.institution %> | <%= edu.startDate %> - <%= edu.endDate %></p>
+        <% }); %>
+    </section>
+
+    <section class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <% certifications.forEach(function(cert) { %>
+                <li><%= cert %></li>
+            <% }); %>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Professional Development</h2>
+        <ul>
+            <% professionalDevelopment.forEach(function(item) { %>
+                <li><%= item %></li>
+            <% }); %>
+        </ul>
+    </section>
+</body>
+</html>
