@@ -5,14 +5,15 @@
     "location": "Karachi, Pakistan",
     "phone": "+923471674062",
     "email": "irfanali.17899@gmail.com",
-    "githubURL": "https://www.github.com/irfanali17899",
-    "linkedinURL": "https://www.linkedin.com/in/irfanali17899"
+    "githubURL": "github.com/irfanali17899",
+    "linkedinURL": "linkedin.com/in/irfanali17899"
   },
   "professionalSummary": "Innovative Full Stack Engineer and DevOps specialist with 6+ years of experience architecting and implementing scalable web applications and cloud-native solutions. Expertise in MERN stack, microservices architecture, and continuous integration/deployment pipelines. Proven track record of leading high-impact projects, driving technological advancements, and delivering solutions that enhance operational efficiency and user engagement across fintech, insurance, and SaaS industries.",
   "technicalSkills": {
     "Programming Languages": [
       "JavaScript",
       "TypeScript",
+      "Golang",
       "Python",
       "Dart",
       "SQL"
@@ -42,6 +43,7 @@
     "Backend, Data & APIs": [
       "Node.js",
       "Express.js",
+      "Gin",
       "NestJS",
       "Django",
       "Flask",
@@ -209,15 +211,23 @@
   ],
   "education": [
     {
-      "degree": "Bachelor of Computer Science",
+      "title": "Bachelor of Computer Science",
       "institution": "Karachi University",
       "startDate": "Jan 2019",
       "endDate": "Dec 2022"
+    },
+    {
+      "title": "Full Stack Engineering",
+      "institution": "SMIT",
+      "startDate": "Jan 2016",
+      "endDate": "Dec 2017"
+    },
+    {
+      "title": "DevOps & Cloud-Native Computing",
+      "institution": "Axiom",
+      "startDate": "Jan 2018",
+      "endDate": "Jul 2018"
     }
-  ],
-  "certifications": [
-    "DevOps & Cloud-Native Computing Certification, Axiom | Jan 2018 - Jul 2018",
-    "MERN Stack Engineering Certification, SMIT | Jan 2016 - Dec 2017"
   ],
   "notableProjects": [
     {

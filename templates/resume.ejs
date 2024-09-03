@@ -45,7 +45,7 @@
         }
         .skills-line {
             margin-top: 2px;
-            line-height: 1.2;
+            line-height: 1.5;
         }
         .experience-item, .project-item {
             margin-bottom: 10px;
@@ -58,6 +58,11 @@
         }
         .experience-company, .project-description {
             font-style: italic;
+        }
+        .experience-location{
+            font-size: 12px;
+            font-style: italic;
+            padding-left: 4px;
         }
         .experience-date, .project-tech {
             color: #7f8c8d;
@@ -85,8 +90,8 @@
         </h1>
         <div class="contact-info">
             <%= personalInfo.location %> | <%= personalInfo.phone %> | <%= personalInfo.email %> |
-            <a href="<%= personalInfo.githubURL %>" target="_blank">GitHub</a> | 
-            <a href="<%= personalInfo.linkedinURL %>" target="_blank">LinkedIn</a>
+            <a href="https://<%= personalInfo.githubURL %>" target="_blank"><%= personalInfo.githubURL %></a> | 
+            <a href="https://<%= personalInfo.linkedinURL %>" target="_blank"><%= personalInfo.linkedinURL %></a>
         </div>
     </header>
 
@@ -112,8 +117,10 @@
             <% professionalExperience.forEach(function(job, index) { %>
                 <div class="experience-item">
                     <div class="experience-header">
-                        <span class="experience-title"><%= job.title %></span> - 
-                        <span class="experience-company"><%= job.company %>, <%= job.location %></span>
+                        <span class="experience-title"><%= job.title %></span> -
+                        <span class="experience-company"><%= job.company %></span>
+                        <br>
+                        <span class="experience-location"><%= job.location %></span>
                         <span class="experience-date"><%= job.startDate %> - <%= job.endDate %></span>
                     </div>
                     <ul class="achievements">
@@ -148,25 +155,16 @@
     </section>
 
     <section class="section">
-        <h2>Education</h2>
+        <h2>Education & Certifications</h2>
         <div class="two-columns">
             <% education.forEach(function(edu, index) { %>
                 <div>
-                    <p><strong><%= edu.degree %></strong><br>
+                    <p><strong><%= edu.title %></strong><br>
                     <%= edu.institution %> | <%= edu.startDate %> - <%= edu.endDate %></p>
                 </div>
             <% if (index % 2 === 1) { %></div><div class="two-columns"><% } %>
             <% }); %>
         </div>
-    </section>
-
-    <section class="section">
-        <h2>Certifications</h2>
-        <ul>
-            <% certifications.forEach(function(cert) { %>
-                <li><%= cert %></li>
-            <% }); %>
-        </ul>
     </section>
 
     <section class="section">
