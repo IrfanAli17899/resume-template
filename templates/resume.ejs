@@ -4,140 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= personalInfo.name %>
-    </title>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        html {
+            width: 100vw;
+        }
+
         body {
-            font-size: 12px;
-            max-width: 900px;
-            margin: 0 auto;
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Times New Roman', Times, serif;
         }
 
-        h1,
-        h2 {
-            color: #2c3e50;
-        }
-
-
-        h1,
-        h2,
-        h3,
-        p {
-            margin: 0px;
-            padding: 0px;
-        }
-        h3{
-            margin: 5px 0px;
-        }
-
-        h2 {
-            /* font-size: 18px; */
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 5px;
-            margin: 10px 0px;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        ul {
-            padding: 0px;
-            margin: 0px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-        .contact-info{
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 5px;
-        }
-
-        .technical-skills-group {
-            column-count: 2;
-            column-gap: 50px;
-        }
-        .experience-header{
-            display: flex;
-            align-items: center;
-        }
-        .experience-header span{
-            margin: 0px 5px;
-            font-style: italic;
+        section {
+            width: 900px;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>
+    <section class="flex flex-col ">
+        <h1 class="text-2xl font-bold">
             <%= personalInfo.name %>
-                <% if (typeof downloadable !=='undefined' && downloadable) { %>
-                    <button onclick="window.location.href='/download-pdf'">Download PDF</button>
-                    <% } %>
         </h1>
-        <p class="contact-info">
-            <%= personalInfo.location %> |
-                <%= personalInfo.phone %> |
-                    <%= personalInfo.email %> |
-                        <a href="https://<%= personalInfo.githubURL %>" target="_blank">github.com/irfanali17899</a>
-                        |
-                        <a href="https://<%= personalInfo.linkedinURL %>"
-                            target="_blank">linkedin.com/in/irfanali17899</a>
-
-        </p>
-    </header>
-
-    <section>
-        <h2>Professional Summary</h2>
-        <p>
+        <div class="flex  gap-x-2">
+            <a href="mailto:<%= personalInfo.email %>" class="text-sm">
+                <%= personalInfo.email %>
+            </a>
+            <span>|</span>
+            <a href="tel:<%= personalInfo.phone %>" class="text-sm">
+                <%= personalInfo.phone %>
+            </a>
+            <span>|</span>
+            <p class="text-sm">
+                <%= personalInfo.location %>
+            </p>
+            <span>|</span>
+            <a href="https://<%= personalInfo.githubURL %>" target="_blank" class="text-sm">
+                <%= personalInfo.githubURL %>
+            </a>
+            <span>|</span>
+            <a href="https://<%= personalInfo.linkedinURL %>" target="_blank" class="text-sm">
+                <%= personalInfo.linkedinURL %>
+            </a>
+        </div>
+        <p class="text-sm">
             <%= professionalSummary %>
         </p>
     </section>
+    <!-- <section>
+        <h2 class="text-lg font-bold border-b border-black">Summary</h2>
+        
+    </section> -->
     <section>
-        <h2>Technical Skills</h2>
-        <ul class="technical-skills-group">
-            <% Object.entries(technicalSkills).forEach(function([category, skills]) { %>
-                <li>
-                    <h3>
-                        <%= category %>
-                    </h3>
-                    <%= skills.join(' ◦ ') %>
-                </li>
-                <% }) %>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Professional Experience</h2>
+        <h2 class="text-lg font-bold border-b border-black">Experience</h2>
         <ul>
-            <% professionalExperience.forEach(function(job) { %>
+            <% experience.forEach((exp)=> { %>
                 <li>
-                    <div class="experience-header">
-                    <h3>
-                        <%= job.title %> 
-                    </h3>
-                    <span>
-                        -
-                        <%= job.company %>
-                    </span>
-                    -
-                    <span>
-
-                        <%= job.location %> -
-                        <%= job.startDate %> - <%= job.endDate %>
-                    </span>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold">
+                                <%= exp.company %>
+                            </span>
+                            <span class="text-sm italic">
+                                <%= exp.title %>
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <span class="text-sm font-bold">
+                                <%= exp.location %>
+                            </span>
+                            <span class="text-sm">
+                                <%= exp.startDate %> - <%= exp.endDate %>
+                            </span>
+                        </div>
                     </div>
-                    <ul>
-                        <% job.achievements.forEach(function(responsibility) { %>
-                            <li>
-                                <%= responsibility %>
+                    <ul class="list-disc ml-5">
+                        <% exp.achievements.forEach((resp)=> { %>
+                            <li class="text-sm">
+                                <%= resp %>
                             </li>
                             <% }) %>
                     </ul>
@@ -146,36 +91,52 @@
         </ul>
     </section>
     <section>
-        <h2>Education & Certifications</h2>
-        <ul>
-            <% education.forEach(function(edu) { %>
+        <h2 class="text-lg font-bold border-b border-black">Education & Certifications</h2>
+        <ul class="grid grid-cols-2 gap-x-10 gap-y-2">
+            <% education.forEach((edu)=> { %>
                 <li>
-                    <span>
-                        <%= edu.title %>
-                    </span>
-                    -
-                    <span>
-                        <%= edu.institution %>
-                    </span>
-                    <span>
-                        <%= edu.location %> -
-                            <%= edu.startDate %> - <%= edu.endDate %>
-                    </span>
+                    <div class="flex justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold">
+                                <%= edu.institution %>
+                            </span>
+                            <span class="text-sm italic">
+                                <%= edu.title %>
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <span class="text-sm font-bold">
+                                <%= edu.type %>
+                            </span>
+                            <span class="text-sm">
+                                <%= edu.startDate %> - <%= edu.endDate %>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-sm">
+                            <%= edu.description %>
+                        </span>
+                    </div>
                 </li>
                 <% }) %>
         </ul>
     </section>
-
     <section>
-        <h2>Professional Development</h2>
-        <ul>
-            <% professionalDevelopment.forEach(function(item) { %>
-                <li>
-                    <%= item %>
-                </li>
-                <% }); %>
-        </ul>
-    </section>
+        <h2 class="text-lg font-bold border-b border-black">Skills</h2>
+        <ul class="space-y-2">
+            <% Object.entries(technicalSkills).forEach(([category, skills])=> { %>
+                <li class="text-sm">
+                    <span class="text-sm font-bold">
+                        <%= category %>:
+                    </span>
+                    <span class="text-sm leading-5"">
+                        <%= skills.join(' ◦ ') %>
+                        </span>
+                    </li>
+                    <% }) %>
+            </ul>
+        </section>
 </body>
 
 </html>

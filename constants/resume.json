@@ -8,66 +8,58 @@
     "githubURL": "github.com/irfanali17899",
     "linkedinURL": "linkedin.com/in/irfanali17899"
   },
-  "professionalSummary": "Senior Software Engineer and Cloud/DevOps Architect with 7 years of expertise in delivering cloud-native, scalable web and mobile applications across Fintech and SaaS domains. Adept at leading full-stack teams, architecting microservices, and implementing CI/CD pipelines that enhance operational efficiency and improve user engagement. Proven success in driving projects from conception to deployment, resulting in multi-million-dollar transactions, high availability systems, and rapid feature iteration.",
+  "professionalSummary": "Senior Software Engineer and Cloud/DevOps Architect with 7 years of expertise in building scalable applications, leading teams, and optimizing CI/CD pipelines. Proven track record in delivering high-impact projects in Fintech and SaaS, enabling multi-million-dollar transactions and efficient systems.",
   "technicalSkills": {
     "Programming Languages": [
-      "JavaScript / TypeScript",
+      "JavaScript/TypeScript",
       "Golang",
       "Python"
     ],
     "Frontend Development": [
-      "React / Next.js",
-      "Redux / MobX / Zustand",
-      "React Query",
-      "WebSockets / Socket.io",
-      "WebRTC",
-      "Webpack / Babel",
-      "Microfrontend",
-      "Material-UI / Ant Design / Tailwind CSS",
-      "React-Native / Flutter"
+      "React/Next.js",
+      "Angular",
+      "Redux/Zustand",
+      "Rxjs",
+      "NgRx",
+      "React-Query",
+      "WebSockets/WebRTC",
+      "Material-UI/Ant-Design/Tailwind-CSS",
+      "React-Native",
+      "Microfrontends"
     ],
     "Backend Development & Databases": [
-      "Node.js / Express.js / NestJS",
-      "Django / Flask / FastAPI",
+      "Node.js (Express.js, NestJS)",
+      "Django/Flask/FastAPI",
       "Gin",
-      "GraphQL / RESTful APIs / gRPC",
-      "Swagger / OpenAPI",
-      "Microservices",
-      "MongoDB / PostgreSQL / MySQL / Oracle",
-      "Mongoose / TypeORM / Sequelize / Prisma",
+      "GraphQL/REST-APIs/gRPC",
       "Redis",
-      "Elasticsearch",
-      "Kafka"
+      "Kafka/RabbitMQ",
+      "MongoDB/PostgreSQL/MySQL",
+      "Microservices"
     ],
     "Cloud & DevOps": [
-      "AWS / GCP",
-      "Docker / Kubernetes",
-      "CI/CD (Jenkins, GitLab CI, CircleCI, GitHub Actions)",
-      "ArgoCD",
-      "Terraform / CloudFormation / Ansible",
-      "ELK Stack",
-      "Prometheus / Grafana"
+      "AWS/GCP",
+      "Docker/Kubernetes",
+      "CI/CD Pipelines (GitHub Actions, Jenkins)",
+      "Terraform/Ansible",
+      "Prometheus/Grafana"
     ],
-    "Security & Optimization": [
-      "OAuth 2.0 / JWT",
-      "OWASP security practices",
-      "Code splitting / Lazy loading",
-      "Caching-strategies / CDN integration"
-    ],
-    "Tools & Practices": [
-      "Jest / Mocha / Chai",
-      "Cypress / Selenium",
-      "TDD / BDD methodologies",
-      "Agile / Scrum / Kanban",
-      "A/B Testing",
-      "Workspaces / Monorepos (Nx, lerna)"
+    "Testing, Security, and Optimization Practices": [
+      "Jest/Mocha/Chai",
+      "Cypress/Selenium",
+      "TDD/BDD Methodologies",
+      "OAuth/JWT",
+      "Code splitting/Lazy loading",
+      "Caching-strategies/CDN integration",
+      "Agile/Scrum",
+      "Monorepos (Nx, lerna)"
     ]
   },
-  "professionalExperience": [
+  "experience": [
     {
       "title": "Project Leader / Senior Full Stack Engineer",
-      "company": "MustFintech",
-      "location": "South Korea (Remote)",
+      "company": "Must Company",
+      "location": "Seoul, South Korea",
       "startDate": "July 2023",
       "endDate": "Present",
       "achievements": [
@@ -81,7 +73,7 @@
     {
       "title": "Project Leader / Senior Frontend Engineer",
       "company": "Afia Insurance",
-      "location": "Dubai (Remote)",
+      "location": "Dubai, UAE",
       "startDate": "Sep 2022",
       "endDate": "July 2023",
       "achievements": [
@@ -95,7 +87,7 @@
     {
       "title": "Senior Full Stack Engineer",
       "company": "Sidespin",
-      "location": "Canada (Remote)",
+      "location": "Toronto, Canada",
       "startDate": "Aug 2020",
       "endDate": "Sep 2022",
       "achievements": [
@@ -109,7 +101,7 @@
     {
       "title": "Full Stack Engineer",
       "company": "Digital Marknadsplan",
-      "location": "Sweden (Remote)",
+      "location": "Linköping, Sweden",
       "startDate": "Apr 2019",
       "endDate": "Jun 2020",
       "achievements": [
@@ -123,7 +115,7 @@
     {
       "title": "Full Stack Engineer",
       "company": "Panacloud",
-      "location": "Pakistan",
+      "location": "Karachi, Pakistan",
       "startDate": "Jul 2018",
       "endDate": "Mar 2019",
       "achievements": [
@@ -133,31 +125,39 @@
         "Implemented a tracking system monitoring 8K+ active students with 95% accuracy in progress reporting"
       ]
     }
-],
+  ],
   "education": [
     {
       "title": "Google Professional Cloud Architect Certification",
+      "type": "Certification",
       "institution": "Google",
       "startDate": "Oct 2024",
-      "endDate": "Oct 2026"
+      "endDate": "Oct 2026",
+      "description": "Certified in designing and managing scalable, secure, and innovative cloud solutions tailored to business needs."
     },
     {
       "title": "Bachelor of Computer Science",
       "institution": "Karachi University",
+      "type": "Bachelor's Degree",
       "startDate": "Jan 2019",
-      "endDate": "Dec 2022"
+      "endDate": "Dec 2022",
+      "description": "Gained expertise in software development, algorithms, and systems design through a comprehensive computer science degree."
     },
     {
       "title": "Full Stack Engineering",
       "institution": "SMIT",
+      "type": "Certification",
       "startDate": "Jan 2016",
-      "endDate": "Dec 2017"
+      "endDate": "Dec 2017",
+      "description": "Trained in building dynamic, end-to-end web applications using modern front-end and back-end technologies, with a focus on industry standards."
     },
     {
       "title": "DevOps & Cloud-Native Computing",
       "institution": "Axiom",
+      "type": "Certification",
       "startDate": "Jan 2018",
-      "endDate": "Jul 2018"
+      "endDate": "Jul 2018",
+      "description": "Specialized in DevOps practices and cloud-native technologies for optimized deployment, scalability, and system reliability."
     }
   ],
   "professionalDevelopment": [

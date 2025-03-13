@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.render('resume', { ...resume, downloadable: true });
 });
 
-app.get('/download-pdf', async (req, res) => {
+app.get('/pdf', async (req, res) => {
     try {
         // Render EJS to HTML
         const html = await ejs.renderFile(path.join(__dirname, './templates/resume.ejs'), { ...resume, downloadable: false });
