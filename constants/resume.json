@@ -1,168 +1,183 @@
 {
   "personalInfo": {
-    "name": "Irfan Ali",
+    "name": "IRFAN ALI",
     "title": "Senior Software Engineer | DevOps & Cloud Architect",
-    "location": "Karachi, Pakistan",
+    "location": "<a href='https://maps.app.goo.gl/wqn6G5VKJk8DxWWi9'>Karachi, Pakistan</a>",
     "phone": "+923471674062",
     "email": "irfanali.17899@gmail.com",
     "githubURL": "github.com/irfanali17899",
     "linkedinURL": "linkedin.com/in/irfanali17899"
   },
-  "professionalSummary": "Senior Software Engineer and Cloud/DevOps Architect with 7 years of expertise in building scalable applications, leading teams, and optimizing CI/CD pipelines. Proven track record in delivering high-impact projects in Fintech and SaaS, enabling multi-million-dollar transactions and efficient systems.",
+  "professionalSummary": "Full Stack Engineer with 7+ years of progressive experience building scalable web and mobile applications across Fintech, SaaS, and AI platforms. Specialized in designing robust, end-to-end systems with React/Next.js frontends and Node.js/Golang microservices backends. Proven track record of delivering high-impact features that power real-time systems handling millions in transactions and serving 50K+ users. Expertise in distributed architectures, cloud infrastructure (AWS/GCP), and DevOps practices that drive business outcomes.",
   "technicalSkills": {
-    "Programming Languages": [
-      "JavaScript/TypeScript",
-      "Golang",
-      "Python"
-    ],
     "Frontend Development": [
-      "React/Next.js",
-      "Angular",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "React Query",
       "Redux/Zustand",
-      "Rxjs",
-      "NgRx",
-      "React-Query",
-      "WebSockets/WebRTC",
-      "Material-UI/Ant-Design/Tailwind-CSS",
-      "React-Native",
-      "Microfrontends"
+      "WebSockets",
+      "WebRTC",
+      "Tailwind CSS",
+      "Material UI",
+      "React Native"
     ],
-    "Backend Development & Databases": [
-      "Node.js (Express.js, NestJS)",
-      "Django/Flask/FastAPI",
-      "Gin",
-      "GraphQL/REST-APIs/gRPC",
-      "Redis",
-      "Kafka/RabbitMQ",
-      "MongoDB/PostgreSQL/MySQL",
+    "Backend Development": [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Golang",
+      "REST APIs",
+      "GraphQL",
+      "gRPC",
+      "RabbitMQ",
+      "Kafka",
+      "Event-driven Architecture",
       "Microservices"
     ],
-    "Cloud & DevOps": [
-      "AWS/GCP",
-      "Docker/Kubernetes",
-      "CI/CD Pipelines (GitHub Actions, Jenkins)",
-      "Terraform/Ansible",
-      "Prometheus/Grafana"
+    "Database & Caching": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Database Optimization",
+      "Query Performance"
     ],
-    "Testing, Security, and Optimization Practices": [
-      "Jest/Mocha/Chai",
-      "Cypress/Selenium",
-      "TDD/BDD Methodologies",
-      "OAuth/JWT",
-      "Code splitting/Lazy loading",
-      "Caching-strategies/CDN integration",
+    "Cloud & Infrastructure": [
+      "AWS",
+      "GCP",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "GitHub Actions",
+      "Terraform",
+      "Infrastructure as Code"
+    ],
+    "Development Practices": [
+      "Test-Driven Development",
+      "Monorepos (Nx, Lerna)",
+      "Code Reviews",
       "Agile/Scrum",
-      "Monorepos (Nx, lerna)"
+      "System Architecture Design",
+      "Performance Optimization"
     ]
   },
   "experience": [
     {
-      "title": "Project Leader / Senior Full Stack Engineer",
-      "company": "Must Company",
+      "title": "Senior Full Stack Engineer",
+      "company": "MUST COMPANY",
       "location": "Seoul, South Korea",
-      "startDate": "July 2023",
+      "startDate": "Mar 2023",
       "endDate": "Present",
+      "contextStatement": "Led end-to-end development for a comprehensive fintech ecosystem:",
       "achievements": [
-        "Architected and developed flagship fintech platform managing $445M in user deposits, implementing secure transaction systems that process 20K+ daily transactions with 99.9% uptime",
-        "Built real-time AI-powered translation platform supporting 30+ languages with 90% accuracy, reducing meeting translation costs by 40% and serving 200+ daily users",
-        "Led migration from monolithic to microservices architecture, resulting in a 40% improvement in deployment time and a 25% reduction in system downtime",
-        "Established modern development practices using monorepos (Nx), reducing build times by 30% and improving code reuse by 40%",
-        "Spearheaded 4 cross-functional teams managing 8 microservices, improving deployment frequency from bi-weekly to twice per week and reducing post-release bug rate by 20%"
-      ]
-    },
-    {
-      "title": "Project Leader / Senior Frontend Engineer",
-      "company": "Afia Insurance",
-      "location": "Dubai, UAE",
-      "startDate": "Sep 2022",
-      "endDate": "July 2023",
-      "achievements": [
-        "Engineered the MyAlfred rewards platform, growing to 15,000+ active users and processing over $500K in monthly transactions",
-        "Developed FindMyNanny platform, achieving 5K+ registered nannies and 8K+ successful matches within the first 6 months",
-        "Engineered a containerized development environment, reducing new developer onboarding time from 2 days to 6 hours, saving 65% of setup time",
-        "Implemented a real-time Docker-based development system, increasing developer productivity by 25% across 15+ team members",
-        "Managed 3 development teams across 5 projects, achieving an 85% on-time delivery rate and reducing technical debt by 20%"
+        "Architected and scaled (<a href='https://msq.market'>msq.market</a>) platform from concept to serving 50K+ users, handling ~$500M in deposits and 30K+ daily transactions using React, Node.js, AWS, and Redis",
+        "Designed and implemented microservices architecture, reducing deployment times by 50% and system incidents by 30% through domain-driven service boundaries",
+        "Built real-time translation platform (<a href='https://mustbreak.ai'>mustbreak.ai</a>) serving 200+ enterprise clients; optimized by migrating from OpenAI to custom NLP models, reducing latency by 35% and costs by 40%",
+        "Developed multi-tenant HR system with customizable hiring pipelines and integrated messaging (email/WhatsApp), doubling recruiter productivity for 25+ client companies",
+        "Implemented comprehensive observability stack (Redash, Mixpanel, GA) with custom alerting, enabling critical bug identification within hours instead of days",
+        "Streamlined CI/CD with automated testing and conditional deployments within monorepo architecture, enabling daily releases and 70% faster feature delivery"
       ]
     },
     {
       "title": "Senior Full Stack Engineer",
-      "company": "Sidespin",
+      "company": "AFIA INSURANCE",
+      "location": "Dubai, UAE",
+      "startDate": "Sep 2021",
+      "endDate": "Feb 2023",
+      "achievements": [
+        "Modernized rewards platform (<a href='https://myalfred.com'>myalfred.com</a>) by migrating from Next.js 8 to 13, implementing server components and optimizing for 30K+ active users with 200+ daily reward claims",
+        "Engineered key features for (<a href='https://findmynanny.ae'>findmynanny.ae</a>), including matching algorithm, Stripe payment integration, and geolocation services, resulting in 500+ registered caregivers and 100+ successful matches",
+        "Enhanced core insurance platform (<a href='https://insurancemarket.ae'>insurancemarket.ae</a>) transaction flows, supporting 100K+ active users and 200K+ policyholders with secure, high-volume operations",
+        "Created containerized development environment with Docker, Docker Compose, and Tilt, reducing onboarding time from 1.5 days to hours and ensuring consistent environments",
+        "Implemented Git workflow automation and real-time tooling, decreasing cycle time by 35% across multiple projects"
+      ]
+    },
+    {
+      "title": "Senior Full Stack Engineer",
+      "company": "SIDESPIN",
       "location": "Toronto, Canada",
       "startDate": "Aug 2020",
-      "endDate": "Sep 2022",
+      "endDate": "Aug 2021",
+      "style": "break-before-page",
       "achievements": [
-        "Architected SaaS platform enabling 5-minute deployment time for boilerplate templates, serving 50+ enterprise clients with 99.5% availability",
-        "Implemented micro-frontends architecture, reducing application load time by 40% and enabling 3 teams to work simultaneously",
-        "Developed a workflow automation platform processing 5K+ monthly workflows with 99.5% execution success rate",
-        "Created a time tracking system handling 200+ users and processing $50K+ monthly recurring revenue through Stripe integration",
-        "Established microservices architecture, improving deployment efficiency by 35% and reducing codebase complexity by 25%"
+        "Developed one-click deployment engine for full-stack applications with Kubernetes on GCP, reducing project setup from weeks to minutes through automated infrastructure provisioning",
+        "Implemented micro-frontends architecture using Webpack Module Federation and Nx, enabling dynamic feature injection for client-specific applications with 40% code reuse",
+        "Built workflow orchestration platform for client onboarding with Twilio and WebRTC integration, streamlining intake, approvals, task assignments and payment tracking",
+        "Created bullion management dashboard for Sprott Money  (<a href='https://sprottmoney.com'>sprottmoney.com</a>), enabling real-time monitoring of metal storage, pricing, and automated invoice generation",
+        "Delivered multiple MVPs under tight deadlines, focusing on scalable architecture and maintainable codebases despite rapid business pivots"
       ]
     },
     {
       "title": "Full Stack Engineer",
-      "company": "Digital Marknadsplan",
+      "company": "DIGITAL MARKNADSPLAN",
       "location": "Linköping, Sweden",
-      "startDate": "Apr 2019",
-      "endDate": "Jun 2020",
+      "startDate": "Feb 2018",
+      "endDate": "Jul 2020",
       "achievements": [
-        "Developed a SaaS platform managing 5K+ employees across 30+ companies with a 95% customer satisfaction rate",
-        "Built shop system processing 2K+ monthly transactions worth $500K+ through Klarna integration",
-        "Created npm packages used by 10+ internal projects, reducing development time by 25% through component reuse",
-        "Implemented integrations handling 25K+ daily social media posts across 6 platforms with 99.5% delivery rate",
-        "Engineered a component library reducing new feature development time by 30% and bug occurrence by 35%"
+        "Built and maintained Digital Plattform MRM (<a href='https://digitalplattform.se'>digitalplattform.se</a>), a multi-tenant marketing resource management solution used by 20+ companies for campaign planning and automation",
+        "Developed interactive real-time dashboards for monitoring campaign performance and budgets, improving client decision-making capabilities",
+        "Integrated social media APIs (Facebook, Instagram, LinkedIn, Google Ads) through microservices for automated content scheduling and campaign management",
+        "Contributed to CloseBuy (<a href='https://closebuy.se'>closebuy.se</a>) e-commerce platform launch, serving 17.5K+ users with $625K+ in sales; implemented Klarna, Swish, and Swedish Bank ID authentication",
+        "Published reusable UI component libraries as npm packages with Storybook documentation, achieving 50% code reuse across products"
       ]
     },
     {
       "title": "Full Stack Engineer",
-      "company": "Panacloud",
+      "company": "PANACLOUD",
       "location": "Karachi, Pakistan",
-      "startDate": "Jul 2018",
-      "endDate": "Mar 2019",
+      "startDate": "Jul 2017",
+      "endDate": "Jan 2018",
       "achievements": [
-        "Developed a student portal serving 10,000+ students with 99.5% uptime during peak registration periods",
-        "Created an examination platform supporting 1,000+ concurrent users with zero security breaches",
-        "Built an administrative panel managing 500+ daily submissions across 50+ courses",
-        "Implemented a tracking system monitoring 8K+ active students with 95% accuracy in progress reporting"
+        "Developed features for national-level student portal (<a href='https://piaic.org'>piaic.org</a>) supporting 200K+ students across Pakistan as part of presidential AI education initiative",
+        "Built secure online examination system with safe browser integration, handling thousands of concurrent users during peak evaluation periods",
+        "Created student progress tracking system with real-time insights into pass/fail rates and exam participation for administrators",
+        "Developed comprehensive admin panel for managing student data, submissions, and course progression, streamlining academic operations"
       ]
     }
   ],
   "education": [
     {
-      "title": "Google Professional Cloud Architect Certification",
-      "type": "Certification",
-      "institution": "Google",
+      "title": "Professional Cloud Architect",
+      "institution": "Google Cloud",
       "startDate": "Oct 2024",
       "endDate": "Oct 2026",
-      "description": "Certified in designing and managing scalable, secure, and innovative cloud solutions tailored to business needs."
+      "description": "Credential in architecting secure, scalable cloud-native solutions on GCP."
     },
     {
       "title": "Bachelor of Computer Science",
-      "institution": "Karachi University",
-      "type": "Bachelor's Degree",
+      "institution": "University of Karachi",
       "startDate": "Jan 2019",
       "endDate": "Dec 2022",
-      "description": "Gained expertise in software development, algorithms, and systems design through a comprehensive computer science degree."
+      "description": "Focus: Software Engineering, Data Structures, Algorithms, and Systems Design."
     },
     {
-      "title": "Full Stack Engineering",
-      "institution": "SMIT",
-      "type": "Certification",
-      "startDate": "Jan 2016",
-      "endDate": "Dec 2017",
-      "description": "Trained in building dynamic, end-to-end web applications using modern front-end and back-end technologies, with a focus on industry standards."
-    },
-    {
-      "title": "DevOps & Cloud-Native Computing",
+      "title": "DevOps & Cloud-Native Computing Certification",
       "institution": "Axiom",
-      "type": "Certification",
-      "startDate": "Jan 2018",
-      "endDate": "Jul 2018",
-      "description": "Specialized in DevOps practices and cloud-native technologies for optimized deployment, scalability, and system reliability."
+      "startDate": "Jun 2017",
+      "endDate": "Aug 2017",
+      "description": "Focus: CI/CD pipelines, Docker, Infrastructure as Code, Deployment Automation."
+    },
+    {
+      "title": "Full Stack Engineering Certification",
+      "institution": "Saylani Mass IT Training (SMIT)",
+      "startDate": "Jan 2017",
+      "endDate": "Jun 2017",
+      "description": "Hands-on training in building modern web applications using JavaScript, React, Node.js, and REST APIs."
     }
   ],
-  "professionalDevelopment": [
-    "Regular contributor to open-source projects on GitHub, improving performance and scalability for widely used libraries.",
-    "Speaker at tech conferences, presenting on microservices architecture and DevOps best practices to global audiences.",
-    "Mentor for junior developers, leading workshops on emerging technologies with a focus on microservices and cloud-native patterns."
+  "openSourceProjects": [
+    {
+      "title": "React Component Library",
+      "description": "Published reusable UI component library with 100+ stars on GitHub"
+    },
+    {
+      "title": "Serverless Boilerplate",
+      "description": "AWS Lambda-based starter kit for rapid API development"
+    },
+    {
+      "title": "Microservices Workshop",
+      "description": "Created and delivered training materials for distributed systems design"
+    }
   ]
 }

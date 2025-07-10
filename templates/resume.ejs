@@ -2,141 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html {
-            width: 100vw;
-        }
-
-        body {
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        section {
-            width: 900px;
-            margin: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= personalInfo.name %> - Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    a {
+      color: rgb(0, 117, 180) !important;
+      text-decoration: underline !important;
+      text-underline-offset: 4px;
+    }
+  </style>
 </head>
 
-<body>
-    <section class="flex flex-col ">
-        <h1 class="text-2xl font-bold">
-            <%= personalInfo.name %>
-        </h1>
-        <div class="flex  gap-x-2">
-            <a href="mailto:<%= personalInfo.email %>" class="text-sm">
-                <%= personalInfo.email %>
-            </a>
-            <span>|</span>
-            <a href="tel:<%= personalInfo.phone %>" class="text-sm">
-                <%= personalInfo.phone %>
-            </a>
-            <span>|</span>
-            <p class="text-sm">
-                <%= personalInfo.location %>
-            </p>
-            <span>|</span>
-            <a href="https://<%= personalInfo.githubURL %>" target="_blank" class="text-sm">
-                <%= personalInfo.githubURL %>
-            </a>
-            <span>|</span>
-            <a href="https://<%= personalInfo.linkedinURL %>" target="_blank" class="text-sm">
-                <%= personalInfo.linkedinURL %>
-            </a>
-        </div>
-        <p class="text-sm">
-            <%= professionalSummary %>
-        </p>
-    </section>
-    <!-- <section>
-        <h2 class="text-lg font-bold border-b border-black">Summary</h2>
-        
-    </section> -->
-    <section>
-        <h2 class="text-lg font-bold border-b border-black">Experience</h2>
-        <ul>
-            <% experience.forEach((exp)=> { %>
-                <li>
-                    <div class="flex justify-between">
-                        <div class="flex flex-col">
-                            <span class="text-sm font-bold">
-                                <%= exp.company %>
-                            </span>
-                            <span class="text-sm italic">
-                                <%= exp.title %>
-                            </span>
-                        </div>
-                        <div class="flex flex-col items-end">
-                            <span class="text-sm font-bold">
-                                <%= exp.location %>
-                            </span>
-                            <span class="text-sm">
-                                <%= exp.startDate %> - <%= exp.endDate %>
-                            </span>
-                        </div>
-                    </div>
-                    <ul class="list-disc ml-5">
-                        <% exp.achievements.forEach((resp)=> { %>
-                            <li class="text-sm">
-                                <%= resp %>
-                            </li>
-                            <% }) %>
-                    </ul>
-                </li>
-                <% }) %>
-        </ul>
-    </section>
-    <section>
-        <h2 class="text-lg font-bold border-b border-black">Education & Certifications</h2>
-        <ul class="grid grid-cols-2 gap-x-10 gap-y-2">
-            <% education.forEach((edu)=> { %>
-                <li>
-                    <div class="flex justify-between">
-                        <div class="flex flex-col">
-                            <span class="text-sm font-bold">
-                                <%= edu.institution %>
-                            </span>
-                            <span class="text-sm italic">
-                                <%= edu.title %>
-                            </span>
-                        </div>
-                        <div class="flex flex-col items-end">
-                            <span class="text-sm font-bold">
-                                <%= edu.type %>
-                            </span>
-                            <span class="text-sm">
-                                <%= edu.startDate %> - <%= edu.endDate %>
-                            </span>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="text-sm">
-                            <%= edu.description %>
-                        </span>
-                    </div>
-                </li>
-                <% }) %>
-        </ul>
-    </section>
-    <section>
-        <h2 class="text-lg font-bold border-b border-black">Skills</h2>
-        <ul class="space-y-2">
-            <% Object.entries(technicalSkills).forEach(([category, skills])=> { %>
-                <li class="text-sm">
-                    <span class="text-sm font-bold">
-                        <%= category %>:
-                    </span>
-                    <span class="text-sm leading-5"">
-                        <%= skills.join(' ◦ ') %>
-                        </span>
-                    </li>
-                    <% }) %>
-            </ul>
-        </section>
-</body>
+<body class="bg-white text-black text-[15px]">
+  <main class="w-[900px] mx-auto space-y-2">
 
+    <!-- Header -->
+    <section class="space-y-1">
+      <h1 class="text-2xl font-bold"><%= personalInfo.name %></h1>
+      <div class="flex flex-wrap items-center gap-x-2">
+        <a href="mailto:<%= personalInfo.email %>" class="hover:underline"><%= personalInfo.email %></a>
+        <span>|</span>
+        <a href="tel:<%= personalInfo.phone %>" class="hover:underline"><%= personalInfo.phone %></a>
+        <span>|</span>
+        <span><%- personalInfo.location %></span>
+        <span>|</span>
+        <a href="https://<%= personalInfo.githubURL %>" target="_blank" class="hover:underline"><%= personalInfo.githubURL %></a>
+        <span>|</span>
+        <a href="https://<%= personalInfo.linkedinURL %>" target="_blank" class="hover:underline"><%= personalInfo.linkedinURL %></a>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section>
+      <p class="leading-5"><%= professionalSummary %></p>
+    </section>
+
+    <!-- Skills + Education Side by Side -->
+    <section class="grid grid-cols-2 gap-x-8">
+      <!-- Skills -->
+      <div>
+        <h2 class="text-lg font-bold border-b border-black mb-2">Skills</h2>
+        <ul class="space-y-2">
+          <% Object.entries(technicalSkills).forEach(([category, skills]) => { %>
+            <li>
+              <span class="font-bold block mb-1"><%= category %></span>
+              <span class="block leading-5"><%= skills.join(' ◦ ') %></span>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <!-- Education & Certifications -->
+      <div>
+        <h2 class="text-lg font-bold border-b border-black mb-2">Education & Certifications</h2>
+        <ul class="space-y-3">
+          <% education.forEach((edu) => { %>
+            <li>
+              <div class="flex justify-between">
+                <div class="flex flex-col">
+                  <span class="font-bold"><%= edu.institution %></span>
+                  <span class="italic"><%= edu.title %></span>
+                </div>
+                <div class="text-right flex flex-col">
+                  <span class="font-bold"><%= edu.type %></span>
+                  <span><%= edu.startDate %> – <%= edu.endDate %></span>
+                </div>
+              </div>
+              <p class="mt-1 leading-5"><%= edu.description %></p>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2 class="text-lg font-bold border-b border-black mb-2">Experience</h2>
+      <ul class="space-y-4">
+        <% experience.forEach((exp) => { %>
+          <li class="<%= exp.style || '' %>">
+            <div class="flex justify-between">
+              <div class="flex flex-col">
+                <span class="font-bold"><%= exp.company %></span>
+                <span class="italic"><%= exp.title %></span>
+              </div>
+              <div class="text-right flex flex-col">
+                <span class="font-bold"><%= exp.location %></span>
+                <span><%= exp.startDate %> – <%= exp.endDate %></span>
+              </div>
+            </div>
+            <ul class="list-disc ml-5 mt-2 space-y-1">
+              <% exp.achievements.forEach((resp) => { %>
+                <li><%- resp %></li>
+              <% }) %>
+            </ul>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+  </main>
+</body>
 </html>
